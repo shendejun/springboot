@@ -12,7 +12,9 @@ import java.io.InputStream;
 import java.util.Properties;
 
 /**
- * 自定义
+ * springboot配置文件扩展
+ * 自定义:有了这个之后，就可以随意的添加自己的配置了、
+ * 配置文件集中化管理
  */
 //这个标签Component是把MyEnvironmentPostProcessor纳入到spring容器中管理起来
 @Component

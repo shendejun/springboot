@@ -12,6 +12,7 @@ public class DemoApplication {
         ConfigurableApplicationContext context = SpringApplication.run(DemoApplication.class, args);
         System.out.println(context.getEnvironment().getProperty("jdbc.username"));
         System.out.println(context.getEnvironment().getProperty("jdbc.password"));
+        System.out.println(context.getEnvironment().getProperty("springboot.name"));
         System.out.println(context.getBean(TomcatProperties.class));
         context.close();
 

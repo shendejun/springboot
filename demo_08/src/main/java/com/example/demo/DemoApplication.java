@@ -14,6 +14,7 @@ public class DemoApplication {
 		//在配置run中，VM options配置： -Dfile.encoding=GBK
 		System.out.println(System.getProperty("file.encoding"));
 		System.out.println(context.getBeansOfType(EncodingConvert.class));
+		System.out.println(context.getBeansOfType(Runnable.class));
 		context.close();
 	}
 

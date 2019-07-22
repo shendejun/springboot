@@ -3,7 +3,6 @@ package com.example.demo;
 import org.springframework.boot.SpringBootConfiguration;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Conditional;
-import sun.nio.cs.ext.GBK;
 
 /**
  * @Conditional 基于条件的自动配置，一般配合Condition接口一起使用，只有接口（一个或多个）的实现类都返回true才装配，否则不装配

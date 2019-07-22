@@ -20,7 +20,7 @@ public class DemoApplication {
 
         SpringApplication app = new SpringApplication(DemoApplication.class);
         //编码的方式制定生效的profile
-        app.setAdditionalProfiles("test");
+        app.setAdditionalProfiles("dev");
         ConfigurableApplicationContext context = app.run(args);
 
         System.out.println(context.getEnvironment().getProperty("jdbc.username"));

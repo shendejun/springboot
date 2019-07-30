@@ -14,8 +14,9 @@ import org.springframework.scheduling.annotation.EnableAsync;
  * 其实Enable** 就是Import了一个类 (未测试)
  */
 @ComponentScan
-@Import({User.class,Role.class,MyConfiguration.class})
-@EnableAsync
+//@Import({User.class,Role.class,MyConfiguration.class})
+//@EnableAsync
+@EnableLog(name = "my springboot")
 public class DemoApplication2 {
 	public static void main(String[] args) {
 		ConfigurableApplicationContext context = SpringApplication.run(DemoApplication2.class, args);

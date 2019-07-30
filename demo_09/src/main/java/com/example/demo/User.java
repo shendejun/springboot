@@ -1,7 +1,11 @@
 package com.example.demo;
 
+import org.springframework.context.annotation.Import;
+
 /**
  *
  */
-public class User {
+@Import(MyImportSelector.class)
+public @interface User {
+    String name();
 }

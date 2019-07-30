@@ -26,7 +26,8 @@ public class DemoApplication {
         ConfigurableApplicationContext context = app.run(args);
         //发布事件
         context.publishEvent(new MyApplicationEvent(new Object()) );
-        context.close();
+        context.stop();
+//        context.close();
     }
 
 }

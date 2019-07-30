@@ -1,5 +1,6 @@
 package com.example.demo;
 
+import org.springframework.context.event.ContextStoppedEvent;
 import org.springframework.context.event.EventListener;
 import org.springframework.stereotype.Component;
 
@@ -15,5 +16,10 @@ public class MyEventHandle {
     //public void enent(MyApplicationEvent event) {
     public void enent(Object event) {
         System.out.println("接收到事件：" + event.getClass());
+    }
+
+    @EventListener
+    public void envent2(ContextStoppedEvent event){
+        System.out.println("应用程序停止事件："+event.getClass());
     }
 }

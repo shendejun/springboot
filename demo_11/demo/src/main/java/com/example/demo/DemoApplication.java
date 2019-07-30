@@ -7,13 +7,15 @@ import org.springframework.context.ConfigurableApplicationContext;
 /**
  * 1、自定义事件，一般是继承ApplicationEvent抽象类
  * 2、定义事件监听器，一般是实现applicationListener接口
- * 3、发布事件，使用ApplicationContext.publishEvent发布事件
+ * 3、启动的时候，需要把监听器加入到spring容器中
+ * 4、发布事件，使用ApplicationContext.publishEvent发布事件
  */
 @SpringBootApplication
 public class DemoApplication {
 
     public static void main(String[] args) {
         SpringApplication app = new SpringApplication(DemoApplication.class);
+        //把监听器加入到spring容器中
         app.addListeners(new MyApplicationListener());
         ConfigurableApplicationContext context = app.run(args);
         //发布事件

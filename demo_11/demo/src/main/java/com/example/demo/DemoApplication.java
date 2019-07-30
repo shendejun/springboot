@@ -4,6 +4,11 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
 
+/**
+ * 1、自定义事件，一般是继承ApplicationEvent抽象类
+ * 2、定义事件监听器，一般是实现applicationListener接口
+ * 3、发布事件，使用ApplicationContext.publishEvent发布事件
+ */
 @SpringBootApplication
 public class DemoApplication {
 

@@ -1,5 +1,6 @@
 package com.example.demo;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.Banner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -24,6 +25,12 @@ import org.springframework.context.ConfigurableApplicationContext;
  */
 @SpringBootApplication(scanBasePackages = "com.example.demo",excludeName = "")
 public class DemoApplication {
+
+    /**
+     * 配置项中不存在时，使用默认值
+     */
+    @Value("${server.host:localhost}")
+    private String serverHost;
 
     public static void main(String[] args) {
         SpringApplication app = new SpringApplication(DemoApplication.class);

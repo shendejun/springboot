@@ -22,6 +22,10 @@ public class MyWebServerFactoryCustomizer implements WebServerFactoryCustomizer 
         tomcat.addContextValves(getAccessLogValve());
         //添加连接器配置
         tomcat.addConnectorCustomizers(new MyTomcatConnectorCustomizer());
+        tomcat.addInitializers(servletContext -> {
+            System.out.println("============servletContext startup============");
+            servletContext.setAttribute("startup","true");
+        });
     }
 
     private AccessLogValve getAccessLogValve(){

@@ -12,6 +12,7 @@ import org.springframework.boot.web.servlet.ServletComponentScan;
  *
  * springboot 中使用servlet的api
  * 1、编写servlet，然后加上对应的注解，如：@WebServlet，@WebListener，@WebFilter
+ * 2、需要启动ServletComponentScan注解
  */
 @ServletComponentScan
 @SpringBootApplication

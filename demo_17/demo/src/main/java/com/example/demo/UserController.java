@@ -10,4 +10,9 @@ public class UserController {
         System.out.println("----user home---");
         return "user home";
     }
+
+    @GetMapping("/user/help")
+    public String help(){
+        throw new IllegalArgumentException("args is empty");
+    }
 }

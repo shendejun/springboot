@@ -2,6 +2,8 @@ package com.example.demo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.web.servlet.error.ErrorMvcAutoConfiguration;
+import org.springframework.boot.web.server.ErrorPageRegistrar;
 
 /**
  * 拦截器的使用
@@ -12,8 +14,15 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * preHandle:controller执行之前调用
  * postHandle:controller执行之后，且页面渲染之前调用
  * afterCompletion:页面渲染之后调用，一般用于资源的清理
+ *
+ * 异常处理
+ * 如何去掉springboot默认的异常处理
+ * @SpringBootApplication(exclude = ErrorMvcAutoConfiguration.class)
+ *
+ * 使用ErrorPageRegistrar方法
+ * 写一个类，实现ErrorPageRegistrar接口，然后实现registerErrorPages方法，在方法里添加具体的处理逻辑
  */
-@SpringBootApplication
+@SpringBootApplication(exclude = ErrorMvcAutoConfiguration.class)
 public class DemoApplication {
 
     public static void main(String[] args) {

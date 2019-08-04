@@ -20,7 +20,7 @@ import org.springframework.boot.web.server.ErrorPageRegistrar;
  * @SpringBootApplication(exclude = ErrorMvcAutoConfiguration.class)
  *
  * 使用ErrorPageRegistrar方法
- * 写一个类，实现ErrorPageRegistrar接口，然后实现registerErrorPages方法，在方法里添加具体的处理逻辑
+ * 写一个类，实现ErrorPageRegistrar接口，然后实现registerErrorPages方法，在方法里添加具体的处理逻辑(类似web.xml里面配置的处理方式)
  */
 @SpringBootApplication(exclude = ErrorMvcAutoConfiguration.class)
 public class DemoApplication {

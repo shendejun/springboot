@@ -13,7 +13,7 @@ public class CommonErrorPageRegistrar implements ErrorPageRegistrar {
     public void registerErrorPages(ErrorPageRegistry registry) {
         ErrorPage e404 = new ErrorPage(HttpStatus.NOT_FOUND,"/404.html");
         ErrorPage e500 = new ErrorPage(HttpStatus.INTERNAL_SERVER_ERROR,"/500.html");
-
-        registry.addErrorPages(e404,e500);
+        ErrorPage args = new ErrorPage(IllegalArgumentException.class,"/args.html");
+        registry.addErrorPages(e404,e500,args);
     }
 }

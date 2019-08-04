@@ -15,4 +15,9 @@ public class UserController {
     public String help(){
         throw new IllegalArgumentException("args is empty");
     }
+
+    @GetMapping("/user/null")
+    public String empty(){
+        throw new NullPointerException("null");
+    }
 }

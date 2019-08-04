@@ -7,7 +7,7 @@ import org.springframework.boot.web.server.ErrorPageRegistry;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Component;
 
-@Component
+//@Component
 public class CommonErrorPageRegistrar implements ErrorPageRegistrar {
     @Override
     public void registerErrorPages(ErrorPageRegistry registry) {

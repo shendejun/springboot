@@ -21,6 +21,10 @@ import org.springframework.boot.web.server.ErrorPageRegistrar;
  *
  * 使用ErrorPageRegistrar方法
  * 写一个类，实现ErrorPageRegistrar接口，然后实现registerErrorPages方法，在方法里添加具体的处理逻辑(类似web.xml里面配置的处理方式)
+ *
+ * 全局异常处理步骤
+ * 1、写一个类，需要加上ControllerAdvice注解
+ * 2、写一个异常处理方法，方法上面需要机上@ExceptionHandler(value = Exception.class)这个注解，在该方法里面处理异常
  */
 @SpringBootApplication(exclude = ErrorMvcAutoConfiguration.class)
 public class DemoApplication {

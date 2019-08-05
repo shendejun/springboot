@@ -4,6 +4,7 @@ import com.example.demo.dao.UserDao;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.context.annotation.EnableAspectJAutoProxy;
 
 /**
  * Aop开发流程
@@ -15,6 +16,7 @@ import org.springframework.context.ConfigurableApplicationContext;
  * spring.aop.proxy-target-class 默认是使用基于JDK的动态代理来实现AOP，设置为true表示使用cglib（建议设置为true）
  * 如果配置了false，而类没有接口，则依然使用cglib
  */
+@EnableAspectJAutoProxy()
 @SpringBootApplication
 public class DemoApplication {
 

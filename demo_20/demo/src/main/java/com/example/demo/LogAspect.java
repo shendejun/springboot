@@ -4,6 +4,7 @@ import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.After;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
+import org.springframework.aop.framework.AopContext;
 import org.springframework.stereotype.Component;
 
 import java.util.Arrays;
@@ -17,6 +18,7 @@ public class LogAspect {
      */
     @Before("execution(* com.example.demo.dao..*.*(..))")
     public void log(){
+
         System.out.println("before method log dome");
     }
 

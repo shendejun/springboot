@@ -15,6 +15,9 @@ import org.springframework.context.ConfigurableApplicationContext;
  * logging.file=C:/Users/Administrator/Desktop/log/my.log 指定日志文件名字
  * logging.path=C:/Users/Administrator/Desktop/log 指定日志文件的路径，默认为spring.log
  * 日志文件输出文件的大小10M之后，就会分割了
+ * 在源码处有配置：
+ * C:/Users/Administrator/.m2/repository/org/springframework/boot/spring-boot/2.1.7.RELEASE/spring-boot-2.1.7.RELEASE.jar
+ * /org/springframework/boot/logging/logback/defaults.xml 这里配置了最大文件分割
  *
  * #指定控制台日志输出格式
  * logging.pattern.console=%d{yyyy-MMM-dd HH} %-5level [%thread] %logger{15} - %msg%n

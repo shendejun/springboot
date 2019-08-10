@@ -23,6 +23,11 @@ import org.springframework.context.ConfigurableApplicationContext;
  *
  * springboot默认支持logback
  * 也就是说，需要在classpath下放一个logback.xml,或者logback-spring.xml,即可定制日志的输出
+ *
+ * 使用其他的日志组件步骤
+ * 1、排除掉默认日志组件
+ * 2、加入新的日志组件依赖
+ * 3、把相应的配置文件放到classpath下，如log4j2默认的配置文件为log4j2.xml或者log4j2-spring.xml
  */
 @SpringBootApplication(exclude = WebSocketServletAutoConfiguration.class)
 public class DemoApplication {

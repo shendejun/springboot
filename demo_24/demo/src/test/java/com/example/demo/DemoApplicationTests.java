@@ -21,7 +21,9 @@ public class DemoApplicationTests {
     public void contextLoads() {
     }
 
-   
+    /**
+     * 测试bean是否已装配
+     */
     @Test
     public void testNull(){
         Assert.assertNotNull(context.getBean(User.class));

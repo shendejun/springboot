@@ -27,4 +27,10 @@ public class BookControllerTest {
         String content = testRestTemplate.getForObject("/book/home",String.class);
         Assert.assertEquals("home",content);
     }
+
+    @Test
+    public void testShow(){
+        String content = testRestTemplate.getForObject("/book/show?id=100",String.class);
+        Assert.assertEquals("boot:100",content);
+    }
 }

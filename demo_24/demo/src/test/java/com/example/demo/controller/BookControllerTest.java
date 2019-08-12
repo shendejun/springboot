@@ -11,6 +11,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 /**
  * TestRestTemplate 需要运行在web环境中
+ * 这种方式会加载整个spring容器
  */
 @RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)

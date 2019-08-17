@@ -17,7 +17,7 @@ public class MallProductApplication {
 //        product.setPid(1);
 //        //...
 //        productMapper.add(product);
-        applicationContext.close();
+//        applicationContext.close();
     }
 
 }
